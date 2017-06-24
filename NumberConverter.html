@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Color Converter - GritHub</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="darkButton.css">
+    <link rel="stylesheet" href="NumberConverter.css">
+    <script src="global.js"></script>
+    <script src="NumberConverter.js"></script>
+    <link rel="shortcut icon" href="icon.ico"/>
+    
+</head>
+
+<body class="siteBody">
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">GritHub - Grant's Website</a>
+        </div>
+        <ul class="nav nav-justified">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="ColorConverter.html">Color Converter</a></li>
+          <li class="active"><a href="#">Number Converter</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <h3 style="text-align: center;">Number Converter</h3>
+    <div class="container-fluid">
+        <div class="hidden-xs col-sm-2"></div>
+        <span class="col-xs-12 col-sm-5 col-md-4">
+            <p style="font-size:20px">Please input a number to convert:</p>
+        </span>
+    </div>
+    <div class="container-fluid">
+        <div class="hidden-xs col-sm-2"></div>
+        <span class="col-xs-12 col-sm-5 col-md-4">
+            <p style="font-size:12px">Put anything base from 2 (binary) to 10 (decimal) or 16 (hexadecimal) into the input and output boxes to determine the conversion.</p>
+        </span>
+    </div>
+    
+    <div class="container-fluid">
+        <div class="hidden-xs col-sm-2"></div>
+        <span class="col-xs-12 col-sm-5 col-md-4">
+             <input id="NumThree" type="text" placeholder="Input Number"/>
+            <input id="InpType" type="number" placeholder="Input Base" min="2" max="16"/>
+            <input id="OutType" type="number" placeholder="Output Base" min="2" max="16" style="position: absolute; right: 15px;" />
+            <button type="button" onclick="FieldThree()">Submit</button>
+            <p id="ResultThree"></p>
+        </span>
+    </div>
+   
+
+
+    <br><br>
+    <p style="text-align: center;">Author: Grant Geyer</p><br>
+
+</body>
+</html>

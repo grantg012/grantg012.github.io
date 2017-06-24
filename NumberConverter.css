@@ -1,0 +1,27 @@
+p {
+    font-family: "Comic Sans MS";
+}
+
+input {
+    margin-bottom: 3px;
+}
+
+input[type="text"] {
+    width: 100%;
+}
+
+input[type="number"] {
+    width: 47%;
+}
+
+@media (max-width: 767px) {
+    input[type="text"], button {
+        width: 100%;
+    }
+}
+
+#ResultThree {
+    margin-top: 10px;
+    font: 18px Consolas;
+    text-align: center;
+}

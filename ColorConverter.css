@@ -1,0 +1,67 @@
+#spanRGB > input, #spanButtons > button, #spanHex > input {
+    display: block;
+    margin-bottom: 3px;
+}
+
+/* Vertically aligns the inputs  */ 
+#divInputs {
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 767px) {
+    #divInputs {
+        display: block; /* Turn off the flexible box layout on small screens. */
+    }
+}
+
+#divInputs > span {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+#divInputs input, #divInputs button {
+    width: 100%;
+}
+
+input[type="text"], .colorText, input[type="number"], .colorText {
+    font-family: Consolas, "Lucida Console", Monaco;
+}
+
+input[type="number"], .colorText {
+    width: 70px;
+}
+
+button {
+    width: 110px
+}
+
+#divInputs {
+    margin-bottom: 10px;
+}
+
+#lblCaps {
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.dispColor {
+    background-color: black;
+    color: white;
+    width: 318px;
+    height: 70px;
+    display: block;
+}
+
+.colorText {
+    margin: 5px;
+    padding: 1px 3px;
+    display: inline-block;
+    background-color: rgba(0,0,0,0.5);
+}
+
+input {
+    font-size: 16px;
+}
+
+

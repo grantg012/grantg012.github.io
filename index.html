@@ -1,141 +1,42 @@
 <!DOCTYPE html>
-<meta name="robots" content="noindex">
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Table Properties</title>
-  
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>GritHub - Grant</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="blinker.css">
+    <link rel="shortcut icon" href="icon.ico"/>
+
 </head>
-<body>
 
-  <table id="tbl1" class="table table-striped table-hover">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody id="sortable2">
-		<script>
-			$( "#sortable2" ).sortable();
-			$( "#sortable2" ).disableSelection();
-		</script>
-      <tr class="ui-state-default">
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr class="ui-state-default">
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr class="ui-state-default">
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  <span class="btn btn-danger" id="removeHere">
-	<span class="fa fa-trash"></span>
-	Drag runners here to remove
-  </span>
- 
-	<button type="button" onclick="addRow()">Add Row</button>
-	<button type="button" onclick="clearTable()">Clear Table</button>
-	<button type="button" onclick="hideTable()">Toggle Table</button>
-	<button type="button" onclick="printNames()">Get Names</button>
-	<button href="" download="myfile.txt" onclick="downloadHand(this)">Download</button>
-   
-  <br><br>
-  
-  <p id="pNames"></p>
-  
-  <br><br>
-  
-  <p id="pFirst"></p>
-  
-<script id="jsbin-javascript">
-function addRow() {
-	var tbl1 = document.getElementById("sortable2");
-	var row = tbl1.insertRow();
-	row.className = "ui-state-default";
+<body class="siteBody">
 
-	var values = ["Kurt", "Smith", "none"];
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">GritHub - Grant's Website</a>
+        </div>
+        <ul class="nav nav-justified">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="ColorConverter.html">Color Converter</a></li>
+          <li><a href="NumberConverter.html">Number Converter</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <span style="position: absolute; right: 25%;" id="containerWelcome">
+        <h1 id="hWelcome" style="display: inline-block;">
+            Welcome to<br> Grant's<br> Homepage
+        </h1>
+        <span id="blinking-cursor">|</span>
+    </span>
 
-	for(var i = 0; i < 3; i++) {
-		var cell = row.insertCell();
-		cell.innerHTML = values[i];
-	} 
-}
-
-function clearTable() {
-	var tbl1 = document.getElementById("sortable2");
-	// console.log(tbl1.rows.length);
-
-	// tbl1.style.display = "none";
-	console.log(tbl1.style.display);
-
-	addRow();
-
-	while(tbl1.rows.length > 0) {
-		tbl1.deleteRow(tbl1.rows.length-1);
-	}
-}
-
-function hideTable() {
-	var tbl1 = document.getElementById("sortable2");
-
-	if(tbl1.style.display == "none") {
-		tbl1.style.display = "";
-	} else {
-		tbl1.style.display = "none";
-	}
-}
-
-function printNames() {
-	var content = "";
-	var tbl1 = document.getElementById("sortable2");
-	for(var row = 0; row < tbl1.rows.length; row++) {
-		content += tbl1.rows[row].cells[0].innerHTML;
-		content += "<br>"
-	}
-  
-	document.getElementById("pNames").innerHTML = content;
-  
-}
-
-$("#sortable2").on("sortupdate", function(event, ui ) {
-	document.getElementById("pFirst").innerHTML = 
-		"First: " + 
-		document.getElementById("sortable2").rows[0].cells[0].innerHTML;
-});
-
-function downloadTable(parent) {
-	parent.href = 'data:text/plain;charset=utf-8,'
-		+ encodeURIComponent(document.getElementById("container").innerHTML); 
-}
-
-$("#removeHere").droppable({
-	tolerance: "touch", 
-	accept: "tr"
-});
-
-$("#removeHere").on("drop", function(event, ui) {
-	console.log(ui.helper);
-	ui.helper.remove();
-});
-</script>
 </body>
 </html>

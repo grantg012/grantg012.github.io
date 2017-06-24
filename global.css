@@ -1,0 +1,41 @@
+/* This stylesheet is used on all pages on my site.  */ 
+
+/* Make the navbar items justified */ 
+/* Make the navbar title align center */ 
+.navbar-header {
+	float: left;
+	padding: 15px;
+	text-align: center;
+	width: 100%;
+}
+.navbar-brand {
+	float:none;
+}
+.nav-justified {
+    width: 97%;
+}
+.nav-justified > li {
+    float: none;
+}
+.nav-justified li.active a {
+    color: #b7b7b7;
+    background-color: #0f0f0f;
+}
+.nav-justified li a:not(.active) {
+    color: #c7c7c7;
+}
+.nav-justified li:not(.active) a:hover {
+    background-color: #3c3c3c;
+}
+
+/* Remove the click cursor when hovering on the chosen page. */ 
+.nav.navbar-nav li.active a {
+	cursor: context-menu;
+}
+
+/* Give all the bodies the same background. */ 
+.siteBody {
+	background-color: #2a2a2a;
+	color: #d6d6d6; 
+}
+

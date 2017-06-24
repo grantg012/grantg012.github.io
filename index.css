@@ -1,0 +1,7 @@
+/* Stylesheet for the main welcome page. */ 
+
+/* Style the welcome title and blinking cursor. */ 
+#containerWelcome > h1, #containerWelcome > span {
+	text-align: right; 
+	font: 72px Consolas;
+}

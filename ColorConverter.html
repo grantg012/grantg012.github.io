@@ -38,9 +38,9 @@
     <div id="divInputs" class="container-fluid">
         <div class="hidden-xs col-sm-2"></div>
         <span id="spanRGB" class="col-sm-2 col-xs-12">
-            <input id="txtRed" type="number" placeholder="Red" tabIndex="1" min="0" max="255"/>
-            <input id="txtGrn" type="number" placeholder="Green" tabIndex="2" min="0" max="255"/>
-            <input id="txtBlu" type="number" placeholder="Blue" tabIndex="3" min="0" max="255"/>
+            <input id="txtRed" type="number" placeholder="Red" tabIndex="1" min="0" max="255" onkeypress="toHexText(event)"/>
+            <input id="txtGrn" type="number" placeholder="Green" tabIndex="2" min="0" max="255" onkeypress="toHexText(event)"/>
+            <input id="txtBlu" type="number" placeholder="Blue" tabIndex="3" min="0" max="255" onkeypress="toHexText(event)"/>
         </span>
         
         <span id="spanButtons" class="col-sm-2 col-xs-12">
@@ -49,7 +49,7 @@
         </span>
         
         <span id="spanHex" class="col-sm-2 col-xs-12">
-            <input id="txtHex" type="text" size="12" placeholder="Hex" tabIndex="5"/>
+            <input id="txtHex" type="text" size="12" placeholder="Hex" tabIndex="5"  onkeypress="toRGBText(event)"/>
         </span>
     </div>
     
@@ -75,7 +75,7 @@
     </div>
     
     <br><br>
-    <p style="text-align: center;">Author: Grant Geyer</p><br>
+    <p style="text-align: center;">Author: Grant G. </p><br>
 
 </body>
 </html>

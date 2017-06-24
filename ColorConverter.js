@@ -17,6 +17,12 @@ function toHex() {
     document.getElementById("txtHex").select();
 }
 
+function toHexText(e) {
+    if(e.keyCode == 13) {
+        toHex();
+    }
+}
+
 function toRGB() {
     var hexString = document.getElementById("txtHex").value;
     hexString = caseChange(hexString);
@@ -29,6 +35,12 @@ function toRGB() {
     document.getElementById("divColor").style.backgroundColor = "#" + hexString;
     document.getElementById("txtRed").focus();
     document.getElementById("txtRed").select();
+}
+
+function toRGBText(e) {
+    if(e.keyCode == 13) {
+        toRGB();
+    }
 }
 
 function fromPick() {

@@ -50,9 +50,9 @@
     <div class="container-fluid">
         <div class="hidden-xs col-sm-2"></div>
         <span class="col-xs-12 col-sm-5 col-md-4">
-             <input id="NumThree" type="text" placeholder="Input Number"/>
-            <input id="InpType" type="number" placeholder="Input Base" min="2" max="16"/>
-            <input id="OutType" type="number" placeholder="Output Base" min="2" max="16" style="position: absolute; right: 15px;" />
+            <input id="NumThree" type="text" placeholder="Input Number" onkeypress="FieldThreeText(event)"/>
+            <input id="InpType" type="number" placeholder="Input Base" min="2" max="16" onkeypress="FieldThreeText(event)"/>
+            <input id="OutType" type="number" placeholder="Output Base" min="2" max="16" style="position: absolute; right: 15px;"  onkeypress="FieldThreeText(event)"/>
             <button type="button" onclick="FieldThree()">Submit</button>
             <p id="ResultThree"></p>
         </span>
@@ -61,7 +61,7 @@
 
 
     <br><br>
-    <p style="text-align: center;">Author: Grant Geyer</p><br>
+    <p style="text-align: center;">Author: Grant G.</p><br>
 
 </body>
 </html>

@@ -1,5 +1,5 @@
 var divArray=["divColor","divPrev1","divPrev2", "divPrev3"];
-var spnArray=["spnCur", "spnPrev1", "spnPrev2", "spnPrev3"];
+var spnArray=["spnCur", "spnPrev1", "spnPrev2", "spnPrev3"]; 
 
 function toHex() {
     var red = Number(document.getElementById("txtRed").value);
@@ -59,7 +59,13 @@ function fromPick() {
 }
 
 function base10to16(paramValue) {
-    return Converter2(paramValue, 10, 16);
+    var rtrnValue = Converter2(paramValue, 10, 16);
+    
+    // Zero pad if needed. 
+    if(rtrnValue.length == 1)
+        rtrnValue = "0" + rtrnValue;
+    
+    return rtrnValue;
 }
 
 function base16to10(param) {
@@ -96,6 +102,7 @@ function addToTop(color, hexString) {
     document.getElementById("txtRed").value = base16to10(hexString.substring(1, 3));
     document.getElementById("txtGrn").value = base16to10(hexString.substring(3, 5));
     document.getElementById("txtBlu").value = base16to10(hexString.substring(5, 7));
+    document.getElementById("colorPicker").value = caseChange(hexString);
     document.getElementById("divColor").style.backgroundColor = color;
     document.getElementById("spnCur").innerHTML = hexString;
     document.getElementById("txtHex").focus();

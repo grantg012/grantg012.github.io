@@ -62,8 +62,9 @@ function base10to16(paramValue) {
     var rtrnValue = Converter2(paramValue, 10, 16);
     
     // Zero pad if needed. 
-    if(rtrnValue.length == 1)
+    while(rtrnValue.length < 2)
         rtrnValue = "0" + rtrnValue;
+    // if(rtrnValue.length == 1)
     
     return rtrnValue;
 }

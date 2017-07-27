@@ -24,11 +24,11 @@
     width: 100%;
 }
 
-input[type="text"], .colorText, input[type="number"], .colorText {
+input[type="text"], .colorText, input[type="number"] {
     font-family: Consolas, "Lucida Console", Monaco;
 }
 
-input[type="number"], .colorText {
+input[type="number"] {
     width: 70px;
 }
 

@@ -58,10 +58,21 @@ button {
     padding: 1px 6px;
     display: inline-block;
     background-color: rgba(0,0,0,0.5);
+    border-radius: 5px;
 }
 
 input {
     font-size: 16px;
+}
+
+#divColor {
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+}
+
+.dispColor:last-of-type {
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
 }
 
 

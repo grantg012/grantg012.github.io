@@ -1,6 +1,8 @@
 var divArray=["divColor","divPrev1","divPrev2", "divPrev3"];
 var spnArray=["spnCur", "spnPrev1", "spnPrev2", "spnPrev3"]; 
 
+
+
 function toHex() {
     var red = Number(document.getElementById("txtRed").value);
     var grn = Number(document.getElementById("txtGrn").value);
@@ -116,4 +118,8 @@ function caseChange(text, caps) {
         return text.toUpperCase();
     else 
         return text.toLowerCase();
+}
+
+function cancelChildClick(e) {
+    e.stopPropagation();
 }

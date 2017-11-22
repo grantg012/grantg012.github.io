@@ -66,10 +66,12 @@
     <div class="container-fluid">
         <div class="hidden-xs col-sm-2"></div>
         <div class="col-sm-4 col-xs-12">
-            <div id="divColor" class="dispColor col-sm-3 col-xs-12"><span id="spnCur" class="colorText"></span></div>
-            <div id="divPrev1" class="dispColor col-sm-3 col-xs-12" onclick="previewClicked(this)"><span id="spnPrev1" class="colorText"></span></div>
-            <div id="divPrev2" class="dispColor col-sm-3 col-xs-12" onclick="previewClicked(this)"><span id="spnPrev2" class="colorText"></span></div>
-            <div id="divPrev3" class="dispColor col-sm-3 col-xs-12" onclick="previewClicked(this)"><span id="spnPrev3" class="colorText"></span></div>
+            <span id="dispColorContainer">
+                <div id="divColor" class="dispColor col-sm-3 col-xs-12"><span id="spnCur" class="colorText"></span></div>
+                <div id="divPrev1" class="dispColor col-sm-3 col-xs-12" onclick="previewClicked(this)"><span id="spnPrev1" class="colorText" onclick="cancelChildClick(event)"></span></div>
+                <div id="divPrev2" class="dispColor col-sm-3 col-xs-12" onclick="previewClicked(this)"><span id="spnPrev2" class="colorText" onclick="cancelChildClick(event)"></span></div>
+                <div id="divPrev3" class="dispColor col-sm-3 col-xs-12" onclick="previewClicked(this)"><span id="spnPrev3" class="colorText" onclick="cancelChildClick(event)"></span></div>
+            </span>
             
         </div>
     </div>

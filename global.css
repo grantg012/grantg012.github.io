@@ -12,7 +12,8 @@
 	float:none;
 }
 .nav-justified {
-    width: 97%;
+    width: 100%;
+    margin-right: 0;
 }
 .nav-justified > li {
     float: none;

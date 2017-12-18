@@ -1,0 +1,5 @@
+input[type="text"] {
+    margin-bottom: 15px;
+    font-family: Consolas, "Lucida Console", Monaco;
+    width: 100%;
+}

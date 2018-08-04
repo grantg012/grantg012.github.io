@@ -1,7 +1,7 @@
 var divArray=["divColor","divPrev1","divPrev2", "divPrev3"];
 var spnArray=["spnCur", "spnPrev1", "spnPrev2", "spnPrev3"]; 
 
-
+const ENTER_KEY = 13
 
 function toHex() {
     var red = Number(document.getElementById("txtRed").value);
@@ -20,7 +20,7 @@ function toHex() {
 }
 
 function toHexText(e) {
-    if(e.keyCode == 13) {
+    if(e.keyCode === ENTER_KEY) {
         toHex();
     }
 }
@@ -40,7 +40,7 @@ function toRGB() {
 }
 
 function toRGBText(e) {
-    if(e.keyCode == 13) {
+    if(e.keyCode === ENTER_KEY) {
         toRGB();
     }
 }

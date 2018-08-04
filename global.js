@@ -30,7 +30,7 @@ function Converter2(param, inputBase, outputBase) {
     } else if (outputBase == 10) { //base 10
         return ParamValue;
     } else if (outputBase == 16) { //hexadecimal
-        var LoopItVal = 0;
+        LoopItVal = 0;
         var HexCharVal = 0;
         for (i = Math.floor(Math.log(ParamValue)/Math.log(16)); i >= 0; i--) {
             LoopItVal = Math.pow(16, i);

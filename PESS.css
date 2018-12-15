@@ -28,8 +28,35 @@
 
 #divInputs input[type="number"] {
     width: 90px;
+    color: #d0d0d0;
 }
 
 #txtNotes {
     width: 100%;
 }
+
+#txtMoney::before {
+    content: "$";
+}
+
+
+.input-icon > i {
+    position: absolute;
+    display: block;
+    transform: translate(0, -50%);
+    top: 50%;
+    pointer-events: none;
+    width: 25px;
+    text-align: center;
+    font-style: normal;
+}
+
+.input-icon > input {
+    padding-left: 25px;
+    padding-right: 0;
+}
+
+.glyphicon, .fa {
+    margin-right: 4px;
+}
+

@@ -45,7 +45,7 @@ button:active {
     box-shadow: 1px 1px 1px rgba(255,255,255,0.1); /* CSS3 */
 }
 
-input[type="text"], input[type="number"] {
+input[type="text"], input[type="number"], textarea {
     border: 1px solid #111;
     padding: 0.5em;
     font-size: 15px;

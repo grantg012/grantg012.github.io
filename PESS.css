@@ -39,6 +39,10 @@
     content: "$";
 }
 
+.statRow p {
+    padding-top: 8px;
+}
+
 
 .input-icon > i {
     position: absolute;
@@ -60,8 +64,18 @@
     margin-right: 4px;
 }
 
-@media (max-width: 700px) {
+
+
+@media (max-width: 480px) {
     .extraButton {
         display: none;
+    }
+}
+
+
+@media (max-width: 400px) { 
+    #pInfrac {
+        font-size: 10px;
+        padding-top: 12px;
     }
 }

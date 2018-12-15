@@ -60,3 +60,8 @@
     margin-right: 4px;
 }
 
+@media (max-width: 700px) {
+    .extraButton {
+        display: none;
+    }
+}

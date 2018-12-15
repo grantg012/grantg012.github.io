@@ -1,6 +1,10 @@
 function changeBox(boxID, amount) {
     var currentValue = Number(document.getElementById(boxID).value);
-    document.getElementById(boxID).value = currentValue + Number(amount);
+    var newValue = currentValue + Number(amount);
+    var boxMin = Number(document.getElementById(boxID).min);
+    var boxMax = Number(document.getElementById(boxID).max);
+    if(boxMin <= newValue && newValue <= boxMax)
+        document.getElementById(boxID).value = Math.round(newValue * 10) / 10;
 }
 
 function GPAchange(amount) {
@@ -21,7 +25,7 @@ function moneyChange(amount) {
 
 function studiesChange(amount) {
     amount = Number(amount);
-    if(amount == 0) 
+    if(amount === 0) 
         document.getElementById("txtStudies").value = 0;
     else {
         var currentValue = Number(document.getElementById("txtStudies").value);
@@ -31,7 +35,7 @@ function studiesChange(amount) {
 
 function infracChange(amount) {
     amount = Number(amount);
-    if(amount == 0) 
+    if(amount === 0) 
         document.getElementById("txtInfrac").value = 0;
     else {
         var currentValue = Number(document.getElementById("txtInfrac").value);

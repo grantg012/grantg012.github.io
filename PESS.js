@@ -44,11 +44,37 @@ function infracChange(amount) {
 }
 
 function resetStats() {
-    document.getElementById("txtGPA").value = 3.5;
-    document.getElementById("txtHealth").value = 115;
-    document.getElementById("txtHappy").value = 115;
-    document.getElementById("txtMoney").value = 3500;
+    if(isFullMode()) {
+        document.getElementById("txtGPA").value = 3.5;
+        document.getElementById("txtHealth").value = 115;
+        document.getElementById("txtHappy").value = 115;
+        document.getElementById("txtMoney").value = 3500;
+        document.getElementById("txtInfrac").value = 0;
+    } else {
+        document.getElementById("txtGPA").value = 3.2;
+        document.getElementById("txtHealth").value = 130;
+        document.getElementById("txtHappy").value = 130;
+    }
     document.getElementById("txtStudies").value = 0;
-    document.getElementById("txtInfrac").value = 0;
     document.getElementById("txtNotes").value = "";
+}
+
+function isFullMode() {
+    return document.getElementById("btnSwitch").innerHTML == "Switch to Tech";
+}
+
+function switchModes() {
+    var expanded = document.getElementsByClassName("PESS_Full");
+    if(isFullMode()) {
+        for(let el of expanded) {
+            el.style.display = "none";
+        }
+        document.getElementById("btnSwitch").innerHTML = "Switch to Full";
+    } else {
+        for(let el of expanded) {
+            el.style.display = "block";
+        }
+        document.getElementById("btnSwitch").innerHTML = "Switch to Tech";
+    }
+    resetStats();
 }

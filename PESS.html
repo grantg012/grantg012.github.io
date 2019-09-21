@@ -74,7 +74,7 @@
                 </div>
             </div>
             
-            <div class="statRow">
+            <div class="statRow PESS_Full">
                 <p class="rowLabel"><span class="glyphicon glyphicon-usd"></span>Money:</p>
                 <div class="flex-container">
                     <button type="button" onclick="moneyChange(-100)">-100</button>
@@ -97,7 +97,7 @@
                 </div>
             </div>
             
-            <div class="statRow">
+            <div class="statRow PESS_Full">
                 <p class="rowLabel" id="pInfrac"><span class="glyphicon glyphicon-remove-circle"></span>Infractions:</p>
                 <div class="flex-container">
                     <button type="button" onclick="infracChange()">0</button>
@@ -107,9 +107,10 @@
             </div>
             
             <br>
-            <button type="button" onclick="resetStats()">Reset</button>
-            
-            <br>
+            <span class="inlineContents" id="spnBottomButtons">
+                <button type="button" onclick="resetStats()">Reset</button>
+                <button type="button" onclick="switchModes()" id="btnSwitch">Switch to Tech</button>
+            </span>
             <textarea id="txtNotes" placeholder="Enter any notes you'd like..."></textarea>
             
         </div>

@@ -79,3 +79,12 @@
         padding-top: 12px;
     }
 }
+
+.inlineContents > button {
+    display: inline-block;
+}
+
+#spnBottomButtons {
+    margin-bottom: 12px;
+    display: inline-block;
+}

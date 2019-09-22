@@ -65,14 +65,15 @@ function isFullMode() {
 
 function switchModes() {
     var expanded = document.getElementsByClassName("PESS_Full");
+    var i;
     if(isFullMode()) {
-        for(let el of expanded) {
-            el.style.display = "none";
+        for(i = 0; i < expanded.length; ++i) {
+            expanded[i].style.display = "none";
         }
         document.getElementById("btnSwitch").innerHTML = "Switch to Full";
     } else {
-        for(let el of expanded) {
-            el.style.display = "block";
+        for(i = 0; i < expanded.length; ++i) {
+            expanded[i].style.display = "block";
         }
         document.getElementById("btnSwitch").innerHTML = "Switch to Tech";
     }

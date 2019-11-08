@@ -43,6 +43,10 @@ function infracChange(amount) {
     }
 }
 
+function turnChange(amount) {
+    changeBox("txtTurns", amount);
+}
+
 function resetStats() {
     if(isFullMode()) {
         document.getElementById("txtGPA").value = 3.5;
@@ -54,6 +58,7 @@ function resetStats() {
         document.getElementById("txtGPA").value = 3.2;
         document.getElementById("txtHealth").value = 130;
         document.getElementById("txtHappy").value = 130;
+        document.getElementById("txtMoney").value = 2000;
     }
     document.getElementById("txtStudies").value = 0;
     document.getElementById("txtNotes").value = "";
@@ -65,15 +70,22 @@ function isFullMode() {
 
 function switchModes() {
     var expanded = document.getElementsByClassName("PESS_Full");
+    var simplified = document.getElementsByClassName("PESS_Tech");
     var i;
-    if(isFullMode()) {
+    if(isFullMode()) { // Changing to Tech
         for(i = 0; i < expanded.length; ++i) {
             expanded[i].style.display = "none";
         }
+        for(i = 0; i < simplified.length; ++i) {
+            simplified[i].style.display = "block";
+        }
         document.getElementById("btnSwitch").innerHTML = "Switch to Full";
-    } else {
+    } else { // Changing to full 
         for(i = 0; i < expanded.length; ++i) {
             expanded[i].style.display = "block";
+        }
+        for(i = 0; i < simplified.length; ++i) {
+            simplified[i].style.display = "none";
         }
         document.getElementById("btnSwitch").innerHTML = "Switch to Tech";
     }

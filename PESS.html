@@ -74,11 +74,11 @@
                 </div>
             </div>
             
-            <div class="statRow PESS_Full">
+            <div class="statRow PESS">
                 <p class="rowLabel"><span class="glyphicon glyphicon-usd"></span>Money:</p>
                 <div class="flex-container">
                     <button type="button" onclick="moneyChange(-100)">-100</button>
-                        <input id="txtMoney" type="number" placeholder="Money" min="0" max="10000" step="10" value="3500"/>
+                        <input id="txtMoney" type="number" placeholder="Money" min="0" max="900000" step="10" value="3500"/>
                     <!--
                     <div class="form-group input-icon">
                         <i>$</i>
@@ -103,6 +103,14 @@
                     <button type="button" onclick="infracChange()">0</button>
                     <input id="txtInfrac" type="number" placeholder="Infractions" min="-1" max="3" step="1" value="0"/>
                     <button type="button" onclick="infracChange(1)">+1</button>
+                </div>
+            </div>
+            <div class="statRow PESS_Tech" style="display: none;">
+                <p class="rowLabel" id="pLostTurns"><span class="glyphicon glyphicon-remove-circle"></span>Lost Turns:</p>
+                <div class="flex-container">
+                    <button type="button" onclick="turnChange(-1)">-1</button>
+                    <input id="txtTurns" type="number" placeholder="Lost Turns" min="0" max="10" step="1" value="0"/>
+                    <button type="button" onclick="turnChange(1)">+1</button>
                 </div>
             </div>
             

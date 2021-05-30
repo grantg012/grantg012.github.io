@@ -62,6 +62,7 @@ function resetStats() {
     }
     document.getElementById("txtStudies").value = 0;
     document.getElementById("txtNotes").value = "";
+    document.getElementById("txtTurns").value = 0;
 }
 
 function isFullMode() {

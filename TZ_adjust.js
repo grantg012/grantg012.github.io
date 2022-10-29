@@ -23,12 +23,14 @@ function tzToOffset(tzStr) {
     }
 }
 
+function timezoneOf(givenDate) {
+    return givenDate.toLocaleDateString(undefined, {day:'2-digit', timeZoneName: 'short'}).substring(4)
+}
 
 function formatTime(givenDate) {
     const rawHours = givenDate.getHours();
-    const hours = rawHours == 0 ? "12" : (rawHours % 12).toString();
-    return hours + ":" + givenDate.getMinutes() + (rawHours >= 12 ? " PM " : " AM ") +
-        givenDate.toLocaleDateString(undefined, {day:'2-digit',timeZoneName: 'long' }).substring(4)
+    const hours = (rawHours == 0 || rawHours == 12) ? "12" : (rawHours % 12).toString();
+    return hours + ":" + givenDate.getMinutes() + (rawHours >= 12 ? " PM " : " AM ") + timezoneOf(givenDate);
 }
 
 function nowBase() {
@@ -47,7 +49,7 @@ function thing() {
 
         if(!isNaN(givenDate)) {
             const formattedTime = formatTime(givenDate);
-            document.getElementById("pDatetimeOutput").innerHTML = formattedTime;
+            // document.getElementById("pDatetimeOutput").innerHTML = formattedTime;
             document.getElementById('meta_description').setAttribute('content', formattedTime);
         } else {
             document.getElementById("pDatetimeOutput").innerHTML = "Sorry, the date entered is invalid.";
@@ -57,8 +59,14 @@ function thing() {
 
 function newDatetimePreview() {
     const urlBase = window.location.href.split('?')[0];
-    const date = new Date(document.getElementById("inpDatetime").value);
-    location.href = urlBase + "?" + date.toISOString();
+    const time = document.getElementById("inpTime").value + timezoneOf(new Date());
+    location.href = urlBase + "?" + time;
 }
 
-window.onload = thing;
+function thing2() {
+    document.getElementById("pDatetimeOutput").innerHTML = document.getElementById('meta_description').getAttribute('content');
+}
+
+window.onload = thing2;
+
+thing();

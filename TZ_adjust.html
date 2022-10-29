@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title>Color Converter - GritHub</title>
+<title>Timezone Adjuster - GritHub</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -47,12 +47,14 @@
 
         <div class="col-xs-12 col-sm-8">
             <p id="pDatetimeOutput">
-                Pass a date in the URL query (`?11:30:00EST`) to have it rendered in the local timezone.
+                Pass a date in the URL query (`?11:30EST`) to have it rendered in the local timezone.
                 <br>
                 Note that valid timezones are Eastern, Central, Mountain, and
                 Pacific Standard Time (xST) and Daylight Time (xDT). In this
                 implementation, xST will never use daylight savings and daylight
                 time will only use it when active.
+                <br>
+                Currently this only uses client side js, so social media previews will not show the adjusted time.
             </p>
             <br><br>
             <input type="time" id="inpTime">

@@ -49,7 +49,8 @@ function thing() {
 
         if(!isNaN(givenDate)) {
             const formattedTime = formatTime(givenDate);
-            // document.getElementById("pDatetimeOutput").innerHTML = formattedTime;
+            document.getElementById("pDatetimeOutput").innerHTML = formattedTime;
+            // document.getElementsByTagName('meta').namedItem('og:description').setAttribute('content', formattedTime);
             document.getElementById('meta_description').setAttribute('content', formattedTime);
         } else {
             document.getElementById("pDatetimeOutput").innerHTML = "Sorry, the date entered is invalid.";
@@ -63,10 +64,5 @@ function newDatetimePreview() {
     location.href = urlBase + "?" + time;
 }
 
-function thing2() {
-    document.getElementById("pDatetimeOutput").innerHTML = document.getElementById('meta_description').getAttribute('content');
-}
+window.onload = thing;
 
-window.onload = thing2;
-
-thing();

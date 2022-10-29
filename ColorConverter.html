@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="darkButton.css">
     <link rel="stylesheet" href="ColorConverter.css">
@@ -31,12 +31,13 @@
           <li><a href="NumberConverter.html">Number Converter</a></li>
           <li><a href="SlashSwitcher.html">Slash Switcher</a></li>
           <li><a href="PESS.html">PESS Scorecard</a></li>
+          <li><a href="TZ_adjust.html">Timezone Adjuster</a></li>
         </ul>
       </div>
     </nav>
-    
+
     <h3 style="text-align: center;">Color Converter</h3>
-    
+
     <div id="divInputs" class="container-fluid">
         <div class="hidden-xs col-sm-2"></div>
         <span id="spanRGB" class="col-sm-2 col-xs-12">
@@ -44,17 +45,17 @@
             <input id="txtGrn" type="number" placeholder="Green" tabIndex="2" min="0" max="255" onkeypress="toHexText(event)"/>
             <input id="txtBlu" type="number" placeholder="Blue" tabIndex="3" min="0" max="255" onkeypress="toHexText(event)"/>
         </span>
-        
+
         <span id="spanButtons" class="col-sm-2 col-xs-12">
             <button type="button" onclick="toHex()" tabIndex="4" >Convert to Hex</button>
             <button type="button" onclick="toRGB()" tabIndex="6" >Convert to RGB</button>
         </span>
-        
+
         <span id="spanHex" class="col-sm-2 col-xs-12">
             <input id="txtHex" type="text" size="12" placeholder="Hex" tabIndex="5"  onkeypress="toRGBText(event)"/>
         </span>
     </div>
-    
+
     <div class="container-fluid">
         <div class="hidden-xs col-sm-2"></div>
         <div class="col-sm-3 col-xs-12">
@@ -64,7 +65,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="container-fluid">
         <div class="hidden-xs col-sm-2"></div>
         <div class="col-sm-4 col-xs-12">
@@ -74,10 +75,10 @@
                 <div id="divPrev2" class="dispColor col-sm-3 col-xs-12" onclick="previewClicked(this)"><span id="spnPrev2" class="colorText" onclick="cancelChildClick(event)"></span></div>
                 <div id="divPrev3" class="dispColor col-sm-3 col-xs-12" onclick="previewClicked(this)"><span id="spnPrev3" class="colorText" onclick="cancelChildClick(event)"></span></div>
             </span>
-            
+
         </div>
     </div>
-    
+
     <br><br>
     <p style="text-align: center;">Author: Grant G. </p><br>
 
